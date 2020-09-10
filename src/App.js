@@ -1,3 +1,4 @@
+  
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
@@ -26,7 +27,7 @@ setInputValue(value);
   };
   
   const getRandUrl = () => {
-    axios.get(`https://api.nasa.gov/planetary/apod?date=${inputValue}&api_key=YbUynbWVo92eAUAdlerdxb0JPthz9HDt5YPvb9PW`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=YbUynbWVo92eAUAdlerdxb0JPthz9HDt5YPvb9PW&date=${inputValue}`)
     .then(res=>{
       setUrl(res.data.url)
       setTitle(res.data.title);
