@@ -21,16 +21,16 @@ axios.get('https://api.nasa.gov/planetary/apod?api_key=YbUynbWVo92eAUAdlerdxb0JP
   setDate(res.data.date)
 })
 .catch(err=>{
-  let day = prompt('Sorry, there is no photo of the day for today yet. Come back later or enter a specific date in the format "2019-02-20"');
-  axios.get(`https://api.nasa.gov/planetary/apod?api_key=YbUynbWVo92eAUAdlerdxb0JPthz9HDt5YPvb9PW&date=${day}`)
+  let date = new Date();
+  const day = date.getDate();
+  const month = date.getMonth();
+  const year = date.getFullYear();
+  axios.get(`https://api.nasa.gov/planetary/apod?api_key=YbUynbWVo92eAUAdlerdxb0JPthz9HDt5YPvb9PW&date=${year}-${month + 1}-${day}`)
   .then(res=>{
     setUrl(res.data.url);
     setTitle(res.data.title);
     setExp(res.data.explanation);
     setDate(res.data.date);
-  })
-  .catch(err=>{
-    alert("You either need to pick a different date or use the right format")
   })
 });
   }, []);
