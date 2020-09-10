@@ -67,7 +67,7 @@ setInputValue(value);
       <img src={url} />
       <p>{title}</p>
       <p>{exp}</p>
-      <h2>Want to see the photo of the day from a specific date? Enter it below! (Please use Year/Month/Day format seperated by hyphens (ex: 2019-02-19 for Feb 19, 2019)</h2>
+      <h2>Want to see the photo of the day from a specific date? Enter it below! (Please use Year/Month/Day format seperated by hyphens (ex: 2019-2-19 for Feb 19, 2019)</h2>
       <input value={inputValue} onChange={changeInput} />
       <button onClick={getRandUrl}>Let's do it</button>
     </div>
