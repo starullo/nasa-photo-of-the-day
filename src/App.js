@@ -128,7 +128,7 @@ setInputValue(value);
   return (
     <>
     <StyledDiv className="App">
-      <StyledH1>NASA Photo of the Day</StyledH1>
+      <StyledH1>wow</StyledH1>
       {diffDay && <h2>From {date}</h2>}
       <SizedImg src={url} />
       <h2>{title}</h2>
